@@ -4,4 +4,7 @@ For this project I decided to use the architecture: [Feature-sliced design](http
 
 
 
-<img style="text-align: center;" src="./ProjectStructure.svg" alt='ProjectStructure'>
+
+###  <div style="text-align: center"> ProjectStructure</div>
+
+<img style="text-align: center;" src="./ProjectStructure.drawio.svg" alt='ProjectStructure'>
