@@ -1,0 +1,33 @@
+.testAssignment {
+	max-width: 1070px;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+
+	&__image {
+		position: relative;
+
+		max-width: inherit;
+
+		// make image darker
+		filter: brightness(0.5);
+
+		@media (max-width: 768px) {
+			max-height: 500px;
+		}
+	}
+	&__text {
+		position: absolute;
+		top: 164px;
+
+		@media (max-width: 768px) {
+			top: 89px;
+		}
+		@media (max-width: 360px) {
+			max-width: 328px;
+			top: 40px;
+		}
+	}
+}
