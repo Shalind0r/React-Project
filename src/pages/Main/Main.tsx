@@ -1,8 +1,13 @@
 import React, { FC } from 'react';
-import clasess from './Main.module.scss';
+import classes from './Main.module.scss';
+import Header from '../../widgets/Header/Header';
 
 const Main: FC = () => {
-	return <div></div>;
+	return (
+		<>
+			<Header />
+		</>
+	);
 };
 
 export default Main;
