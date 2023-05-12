@@ -1,0 +1,64 @@
+@use 'src/shared/mixins/inputs' as inputs;
+@use 'src/shared/scssVariables/colors' as colors;
+@use 'src/shared/mixins/typography' as typography;
+
+.input {
+	position: relative;
+
+	&__item {
+		@include inputs.input;
+		position: relative;
+		padding-left: 16px;
+
+		&_error {
+			@include inputs.inputError;
+		}
+	}
+
+	&__label {
+		position: absolute;
+		z-index: 2;
+		top: -7px;
+		left: 12px;
+		padding: 0 4px;
+
+		@include typography.TextP2;
+		color: colors.$additional-color;
+
+		opacity: 0;
+		transition: 0.3s;
+
+		// hide border in top-left
+		&::after {
+			content: '';
+			display: inline-block;
+
+			position: absolute;
+			top: 7px;
+			left: 0;
+			z-index: -1;
+
+			width: 100%;
+
+			height: 1px;
+			background: colors.$background-color;
+		}
+		&_error {
+			color: colors.$error-color;
+			&::after {
+				height: 2px;
+			}
+		}
+	}
+	// enabled label
+	&__item:not(:placeholder-shown) + .input__label {
+		opacity: 1;
+	}
+	&__help {
+		margin-top: 4px;
+		margin-left: 16px;
+
+		color: colors.$additional-color;
+		@include typography.TextP2;
+	}
+}

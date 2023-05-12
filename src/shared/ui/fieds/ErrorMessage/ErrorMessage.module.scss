@@ -1,0 +1,8 @@
+@use 'src/shared/scssVariables/colors' as colors;
+@use 'src/shared/mixins/typography' as typography;
+
+.message {
+	color: colors.$error-color;
+	@include typography.TextP1;
+	margin-top: 4px;
+}

@@ -1,0 +1,25 @@
+@use '/src/shared/scssVariables/colors' as colors;
+@use 'src/shared/mixins/typography' as typography;
+
+.button {
+	// reset default styles
+	border: none;
+
+	border-radius: 80px;
+	padding: 4px 23px;
+	background: colors.$primary-color;
+	@include typography.TextP1;
+
+	transition: 0.3s;
+
+	&:hover {
+		background: colors.$primary-color-hover;
+	}
+	&_disabled {
+		background: colors.$disabled-color;
+		color: colors.$text-main-week;
+
+		// disable hover effect
+		pointer-events: none;
+	}
+}

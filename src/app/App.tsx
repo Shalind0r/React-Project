@@ -1,9 +1,14 @@
 import React from 'react';
 
-import './App.css';
+import './App.scss';
+import Main from '../pages/Main/Main';
 
 function App() {
-	return <div className="App"></div>;
+	return (
+		<div className="App">
+			<Main />
+		</div>
+	);
 }
 
 export default App;

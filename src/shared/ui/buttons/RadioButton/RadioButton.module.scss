@@ -1,0 +1,41 @@
+@use 'src/shared/scssVariables/colors' as colors;
+
+//hide default radio
+
+.radioButton {
+	display: flex;
+	gap: 12px;
+	cursor: pointer;
+	&__default {
+		visibility: hidden;
+		position: absolute;
+		z-index: -1;
+	}
+	&__radio {
+		width: 20px;
+		height: 20px;
+		border: 1px solid colors.$divider-color;
+		border-radius: 50%;
+		transition: 0.3s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		& > div {
+			border-radius: inherit;
+			// transition
+			transition: 0.3s;
+			height: 0;
+			width: 0;
+		}
+	}
+	// transition
+	&__default:checked + &__radio {
+		border-color: colors.$secondary-color;
+	}
+	&__default:checked + &__radio > div {
+		background: colors.$secondary-color;
+		height: 10px;
+		width: 10px;
+	}
+}

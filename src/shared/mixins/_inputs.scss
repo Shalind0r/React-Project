@@ -1,0 +1,32 @@
+@use 'src/shared/scssVariables/colors' as colors;
+@use 'src/shared/mixins/typography' as typography;
+
+@mixin input {
+	outline: none;
+
+	border: 1px solid colors.$divider-color;
+	border-radius: 4px;
+
+	background: colors.$background-color;
+
+	max-width: 328px;
+	width: 100%;
+	height: 55px;
+
+	cursor: pointer;
+
+	@include typography.TextP1;
+}
+
+@mixin inputError {
+	border-color: colors.$error-color;
+	border-width: 2px;
+}
+
+@mixin inputText {
+	color: colors.$additional-color;
+}
+
+@mixin inputFilledText {
+	color: colors.$text-main-strong;
+}
