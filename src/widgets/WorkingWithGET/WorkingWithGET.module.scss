@@ -1,0 +1,44 @@
+@use 'src/shared/mixins/typography';
+@use 'src/shared/scssVariables/colors';
+
+.workingWithGet {
+	text-align: center;
+
+	&__title {
+		@include typography.Heading1;
+		margin-bottom: 50px;
+	}
+	&__users {
+		display: grid;
+		grid-template-columns: repeat(3, 33.3%);
+		gap: 30px;
+
+		// fixed container size in rerender after get request
+		height: 537px;
+
+		//media queries
+		@media (max-width: 1024px) {
+			grid-template-columns: repeat(3, 33.3%);
+		}
+		@media (max-width: 768px) {
+			grid-template-columns: repeat(2, 50%);
+			height: 822px;
+			gap: 16px;
+		}
+		@media (max-width: 360px) {
+			grid-template-columns: repeat(1, 100%);
+			height: 1604px;
+			gap: 20px;
+		}
+	}
+	&__button {
+		margin-top: 50px;
+	}
+}
+
+.loader {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}

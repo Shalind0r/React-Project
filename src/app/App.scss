@@ -1,5 +1,6 @@
 @use 'src/shared/static/fonts/initFonts';
 @use 'src/shared/scssVariables/colors' as colors;
+@use 'src/shared/mixins/typography';
 
 body {
 	background: colors.$background-color;
@@ -20,7 +21,8 @@ fieldset {
 
 .container {
 	max-width: 1170px;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 	@media (max-width: 1024px) {
 		max-width: 900px;
 	}
@@ -30,4 +32,36 @@ fieldset {
 	@media (max-width: 360px) {
 		max-width: 330px;
 	}
+}
+// animation styles
+.fadeEnter {
+	opacity: 0;
+}
+.fadeEnterActive {
+	opacity: 1;
+	transition: 500ms ease-in;
+}
+.fadeExit {
+	opacity: 1;
+}
+.fadeExitActive {
+	opacity: 0;
+	transition: 500ms ease-in;
+}
+
+//tooltip
+
+.react-tooltip-arrow {
+	display: none;
+}
+.tooltip {
+	height: 32px;
+	margin-top: 70px;
+	margin-left: 100px;
+	display: flex;
+	align-items: center;
+}
+:root {
+	--rt-color-dark: black !important;
+	--rt-opacity: 0.87 !important;
 }

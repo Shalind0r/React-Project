@@ -1,9 +1,13 @@
 .testAssignment {
 	max-width: 1070px;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+
 	position: relative;
+
 	display: flex;
 	justify-content: center;
+
 	overflow: hidden;
 
 	&__image {
