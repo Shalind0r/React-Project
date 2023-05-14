@@ -9,7 +9,12 @@ const Header: FC<{ className?: string }> = ({ className }) => {
 			<div className={`${classes.header} container`}>
 				<LogoIcon />
 				<div className={classes.header__buttons}>
-					<ButtonAction>Users</ButtonAction> <ButtonAction>Users</ButtonAction>
+					<ButtonAction type={'link'} to={'users'}>
+						Users
+					</ButtonAction>
+					<ButtonAction type={'link'} to={'sign-up'}>
+						Sign up
+					</ButtonAction>
 				</div>
 			</div>
 		</header>

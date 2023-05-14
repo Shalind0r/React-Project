@@ -74,7 +74,11 @@ const PostForm: FC<IProps> = ({ positions, onSubmit, error }) => {
 			/>
 			{error && <ErrorMessage className={classes.error} message={error} />}
 			<fieldset>
-				<ButtonAction disabled={!isValid} className={classes.button}>
+				<ButtonAction
+					type={'button'}
+					disabled={!isValid}
+					className={classes.button}
+				>
 					Sign up
 				</ButtonAction>
 			</fieldset>

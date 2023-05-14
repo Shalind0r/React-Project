@@ -1,8 +1,6 @@
 import React, { FC } from 'react';
 import classes from './WorkingWithGET.module.scss';
-
 import UserCard from '../../entiries/UserCard/UserCard';
-import useGetUsers from '../../hooks/useGetUsers';
 import ButtonAction from '../../shared/ui/buttons/ButtonAction/ButtonAction';
 import { IUsers } from '../../shared/types/IUsers';
 import { CSSTransition } from 'react-transition-group';
@@ -24,7 +22,7 @@ const WorkingWithGet: FC<IProps> = ({
 	disabled,
 }) => {
 	return (
-		<div className={`${classes.workingWithGet} ${className} `}>
+		<div id={'users'} className={`${classes.workingWithGet} ${className} `}>
 			<h2 className={classes.workingWithGet__title}>Working with GET request</h2>
 			<div className={`${classes.workingWithGet__users} container`}>
 				{loading ? (
@@ -55,6 +53,7 @@ const WorkingWithGet: FC<IProps> = ({
 					mountOnEnter
 				>
 					<ButtonAction
+						type={'button'}
 						className={classes.workingWithGet__button}
 						onClick={nextPage}
 					>

@@ -15,7 +15,9 @@ const ImageText: FC<{ className?: string }> = ({ className }) => {
 				also be excited to learn, as the world of Front-End Development keeps
 				evolving.
 			</p>
-			<ButtonAction>Sign up</ButtonAction>
+			<ButtonAction type={'link'} to={'sign-up'}>
+				Sign up
+			</ButtonAction>
 		</div>
 	);
 };
