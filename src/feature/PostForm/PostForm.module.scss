@@ -1,0 +1,25 @@
+@use 'src/shared/mixins/typography' as typography;
+
+.form {
+	max-width: 380px;
+	position: relative;
+	& > fieldset {
+		margin-bottom: 50px;
+
+		&:last-child {
+			display: flex;
+			justify-content: center;
+		}
+	}
+	& > p {
+		margin-bottom: 11px;
+		@include typography.TextP1;
+	}
+}
+.error {
+	position: absolute;
+	left: 0;
+	bottom: 40px;
+	width: 100%;
+	text-align: center;
+}

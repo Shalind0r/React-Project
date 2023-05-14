@@ -8,9 +8,21 @@ import { IUsers } from '../../shared/types/IUsers';
 import { CSSTransition } from 'react-transition-group';
 import ClipLoader from 'react-spinners/ClipLoader';
 
-const WorkingWithGet: FC<{ className?: string }> = ({ className }) => {
-	const { users, loading, nextPage, disabled } = useGetUsers();
+interface IProps {
+	className?: string;
+	users: IUsers[];
+	loading: boolean;
+	nextPage: () => void;
+	disabled: boolean;
+}
 
+const WorkingWithGet: FC<IProps> = ({
+	className,
+	users,
+	loading,
+	nextPage,
+	disabled,
+}) => {
 	return (
 		<div className={`${classes.workingWithGet} ${className} `}>
 			<h2 className={classes.workingWithGet__title}>Working with GET request</h2>

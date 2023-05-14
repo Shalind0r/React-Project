@@ -1,43 +1,46 @@
 import React, { FC } from 'react';
 import classes from './Input.module.scss';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
-import usePhoneInput from '../../../../hooks/usePhoneInput';
+
+import { FieldErrors, UseFormRegisterReturn } from 'react-hook-form';
 
 interface IProps {
 	className?: string;
-	errors?: string;
+	errors?: FieldErrors;
 	type: 'phone' | 'name' | 'email';
 	placeholder?: string;
 	id: string;
+	register?: UseFormRegisterReturn;
+	maxLength?: string;
 }
 
-const Input: FC<IProps> = ({ className, errors, type, placeholder, id }) => {
-	// Custom hook with logic of behavior for phone input
-	const { phoneProps } = usePhoneInput();
-
+const Input: FC<IProps> = ({ className, errors, type, placeholder, id, register }) => {
 	return (
 		<fieldset className={`${className} ${classes.input}`}>
 			<input
+				maxLength={type === 'phone' ? 13 : undefined}
+				{...register}
 				id={id}
 				placeholder={placeholder}
 				className={`${classes.input__item} ${
-					errors ? classes.input__item_error : ''
+					errors && errors[id] ? classes.input__item_error : ''
 				}`}
-				{...(type === 'phone' && phoneProps)}
-				type={type}
+				type={'text'}
 			/>
 			<label
 				className={`${classes.input__label} ${
-					errors ? classes.input__label_error : ''
+					errors && errors[id] ? classes.input__label_error : ''
 				}`}
 				htmlFor={id}
 			>
 				{placeholder}
 			</label>
 			{type === 'phone' && (
-				<p className={classes.input__help}>+38 (XXX) XXX - XX - XX</p>
+				<p className={classes.input__help}>+380 XXX XX - XX - XX</p>
 			)}
-			{errors && <ErrorMessage message={errors} />}
+			{errors && errors[id] && (
+				<ErrorMessage message={errors[id]?.message as string} />
+			)}
 		</fieldset>
 	);
 };

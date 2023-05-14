@@ -1,11 +1,13 @@
 @use 'src/shared/scssVariables/colors' as colors;
-
-//hide default radio
+@use 'src/shared/mixins/typography' as typography;
 
 .radioButton {
 	display: flex;
 	gap: 12px;
 	cursor: pointer;
+	align-items: center;
+
+	//hide default radio
 	&__default {
 		visibility: hidden;
 		position: absolute;
@@ -28,6 +30,9 @@
 			height: 0;
 			width: 0;
 		}
+	}
+	&__text {
+		@include typography.TextP1;
 	}
 	// transition
 	&__default:checked + &__radio {

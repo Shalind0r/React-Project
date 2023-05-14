@@ -1,0 +1,28 @@
+@use 'src/shared/mixins/typography';
+
+.workingWithPost {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+
+	@media (max-width: 360px) {
+		max-width: 328px;
+	}
+
+	&__wrapper {
+		max-width: 380px;
+		margin: 0 auto;
+		& > img {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+.title {
+	margin-bottom: 50px;
+	width: 100%;
+	@include typography.Heading1;
+	text-align: center;
+}

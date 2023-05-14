@@ -8,20 +8,28 @@ const UseGetUsers = () => {
 	const [disabled, setDisabled] = useState(false);
 
 	const [url, setUrl] = useState(
-		'https://frontend-test-assignment-api.abz.agency/api/v1/users?offset=6&count=6',
+		'https://frontend-test-assignment-api.abz.agency/api/v1/users?page=1&count=6',
 	);
 
 	useEffect(() => {
-		if (nextUrl !== null) {
-			axios
-				.get(url)
-				.then((response) => {
-					setUsers(response.data.users);
-					setNextUrl(response.data.links.next_url);
-				})
-				.catch((e) => console.log(e));
-		}
-	}, [url, nextUrl]);
+		axios
+			.get(url)
+			.then((response) => {
+				setUsers(response.data.users);
+				setNextUrl(response.data.links.next_url);
+			})
+			.catch((e) => console.log(e));
+	}, [url]);
+
+	// reFetch after registration
+	const reFetch = () => {
+		axios
+			.get(
+				'https://frontend-test-assignment-api.abz.agency/api/v1/users?page=1&count=6',
+			)
+			.then((response) => setUsers(response.data.users))
+			.catch((e) => console.log(e));
+	};
 
 	useEffect(() => {
 		nextUrl === null && setDisabled(true);
@@ -42,6 +50,8 @@ const UseGetUsers = () => {
 		nextPage,
 		disabled,
 		loading,
+		setUrl,
+		reFetch,
 	};
 };
 
