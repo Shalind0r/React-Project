@@ -9,6 +9,8 @@ const UserCard: FC<{ data: IUsers }> = ({ data }) => {
 	return (
 		<div className={classes.userCard}>
 			<img
+				width={70}
+				height={70}
 				className={classes.userCard__image}
 				src={data.photo ? data.photo : imageCover}
 				alt="User"

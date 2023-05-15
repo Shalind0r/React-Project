@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff1400ed-727c-4b9c-88d4-e4b5e446e0a5" name="Changes" comment="" />
+    <list default="true" id="ff1400ed-727c-4b9c-88d4-e4b5e446e0a5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entiries/UserCard/UserCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/entiries/UserCard/UserCard.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entiries/UserCard/UserCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entiries/UserCard/UserCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useCrateUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useCrateUser.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/TestAssignmentTitle/TestAssignmentTitle.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/TestAssignmentTitle/TestAssignmentTitle.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/TestAssignmentTitle/TestAssignmentTitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/TestAssignmentTitle/TestAssignmentTitle.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +65,7 @@
     "prettierjs.PrettierConfiguration.Package": "D:\\abzTestAssignment\\my-app\\node_modules\\prettier",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\Shalindor\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\231.8770.64\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "D:\\abzTestAssignment\\my-app\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -86,6 +94,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -99,6 +117,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.deploy" />
         <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
@@ -116,7 +135,8 @@
       <workItem from="1683969362357" duration="18931000" />
       <workItem from="1683988589648" duration="34572000" />
       <workItem from="1684087952079" duration="10662000" />
-      <workItem from="1684104593674" duration="5226000" />
+      <workItem from="1684104593674" duration="5876000" />
+      <workItem from="1684111231189" duration="2610000" />
     </task>
     <servers />
   </component>
