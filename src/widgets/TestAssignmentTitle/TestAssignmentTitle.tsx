@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import ImageText from '../../entiries/ImageText/ImageText';
 import classes from './TestAssignmentTitle.module.scss';
-import image from '../../shared/static/images/pexels-alexandr-podvalny-1227513.jpeg';
+import image from '../../shared/static/images/pexels-alexandr-podvalny-1227513.jpg';
 
 const TestAssignmentTitle: FC<{ className?: string }> = ({ className }) => {
 	return (
