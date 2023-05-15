@@ -3,6 +3,7 @@
 
 .workingWithGet {
 	text-align: center;
+	position: relative;
 
 	&__title {
 		@include typography.Heading1;
@@ -37,8 +38,9 @@
 }
 
 .loader {
-	position: fixed;
+	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translateX(-50%) translateY(-50%);
+	z-index: 2;
 }

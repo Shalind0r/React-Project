@@ -7,7 +7,7 @@ import { CSSTransition } from 'react-transition-group';
 import { FieldValues, SubmitHandler } from 'react-hook-form';
 import { IForm } from '../../shared/types/IPost';
 import { IPositions } from '../../shared/types/IPositions';
-import { Element } from 'react-scroll';
+
 interface IProps {
 	className: string;
 	status: boolean;
@@ -40,8 +40,8 @@ const WorkingWithPost: FC<IProps> = ({
 	};
 
 	return (
-		<Element
-			name={'sign-up'}
+		<div
+			id={'sign-up'}
 			style={{ minHeight: minHeight }}
 			className={`${className}  `}
 		>
@@ -76,7 +76,7 @@ const WorkingWithPost: FC<IProps> = ({
 					</div>
 				</div>
 			</CSSTransition>
-		</Element>
+		</div>
 	);
 };
 
