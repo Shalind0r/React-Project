@@ -1,7 +1,6 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://shalind0r.github.io/Abz.agencyTestAssignment/",
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^3.1.0",
